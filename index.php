@@ -46,7 +46,7 @@
         <div id="editable_id" class="editable_class" name="editable_name">test</div>
 
         <textarea id="textarea_id" name="textarea_name" class="textarea_class" rows="4" cols="50">
-        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
         </textarea>
         
     </body>
