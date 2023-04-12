@@ -139,6 +139,34 @@ function createTextBox(containerid, textarr) {
     }
 }
 
+function urlFull() {
+    return (window.location.href).replace(/^(.+?)\/*?$/, "$1"); // remove trailing slashes
+}
+
+function urlProtocol() {
+    return window.location.protocol;
+}
+
+function urlPath() {
+    return window.location.pathname;
+}
+
+function urlparameters() {
+    var paramarray = (window.location.search).split("&");
+    var jsonparam = "["; 
+    paramarray[0] = paramarray[0].replace("?","");
+    
+    for(var i = 0; i < paramarray.length; i++) {
+        let splitparam = paramarray[i].split("=");
+        jsonparam += '{"' + splitparam[0] + '":"' + splitparam[1] + '"}';
+        if(i <  paramarray.length-1) {
+            jsonparam += ',';
+        }
+    }
+    jsonparam += ']';
+    return JSON.parse(jsonparam);
+}
+
 
 var text = '[' +
 '{ "firstName":"John" , "lastName":"Doe" },' +
@@ -171,4 +199,6 @@ window.onload = function(){
     console.log(val("textarea_class")); // by class (bullet)   
 
     edit("editable_class");
+
+    console.log(urlparameter());
 }
