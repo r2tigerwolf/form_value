@@ -200,5 +200,5 @@ window.onload = function(){
 
     edit("editable_class");
 
-    console.log(urlparameter());
+    console.log(urlparameters());
 }
