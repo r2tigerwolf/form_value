@@ -9,6 +9,11 @@ function val(element) {
     else false;
 }
 
+function element(element) {
+    var attribType = checkAttribType(element);
+    return getElement(element, attribType);
+}
+
 function edit(element) {        
     var built_element = buildElement(element, checkAttribType(element));    
     built_element.setAttribute("contentEditable", true); // HTML5
@@ -200,6 +205,7 @@ window.onload = function(){
 
     edit("editable_class");
 
-    console.log(urlparameters());
-    console.log(urlparameters()[3]["test4"]);
+    //console.log(urlparameters());
+    //console.log(urlparameters()[3]["test4"]);
+    console.log(element("text_id"));
 }
